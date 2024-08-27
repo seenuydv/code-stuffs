@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Power Program</title>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <div class="container">
+      <h2>Power Program</h2>
+      <hr>
+      <div class="form-group">
+        <input type="text" id="num1" class="form-control" placeholder="Enter the First Number"><br>
+        <input type="text" id="num2" class="form-control" placeholder="Enter the Second Number"><br>
+        <button type="text" class="btn btn-primary" style="font-weight: bold" onclick="Power()">Get Power</button><br>
+        <h3>Power is: <span id="out"></span></h3>
+      </div>
+    </div>
+    <script>
+      function Power(){
+        let num = parseInt(document.getElementById("num1").value);
+        let exp = parseInt(document.getElementById("num2").value);
+        
+        var pow = num;
+
+        for(i=1;i<exp;i++){
+          pow = pow*num;
+        }
+
+        document.getElementById("out").innerHTML = pow;
+      }
+    </script>
+  </body>
+</html>

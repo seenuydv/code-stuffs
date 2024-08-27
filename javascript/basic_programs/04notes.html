@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Notes Dividing Program</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Notes Dividing Program</h2>
+      <div class="form-group">
+        <input type="text" id="notes" class="form-control" placeholder="Enter the Amount"><br>
+        <button class="btn btn-primary" onclick="Notes()" style="font-weight:bold">Divide Notes</button>
+      </div>
+
+      <h3>500 Notes: <span id="five100"></span></h3>
+      <h3>200 Notes: <span id="two100"></span></h3>
+      <h3>100 Notes: <span id="one100"></span></h3>
+      <h3>50 Notes: <span id="fifty"></span></h3>
+      <h3>20 Notes: <span id="twenty"></span></h3>
+      <h3>10 Notes: <span id="ten"></span></h3>
+    </div>
+    <script>
+      function Notes(){
+        let total_notes = parseInt(document.getElementById("notes").value);
+
+        var five_h = 0;
+        var two_h = 0;
+        var one_h = 0;
+        var ff = 0;
+        var tw = 0;
+        var t = 0;
+
+        if(total_notes >= 500){
+          five_h = total_notes/500;
+          total_notes = total_notes%500;
+        }
+        if(total_notes >= 200){
+          two_h = total_notes/200;
+          total_notes = total_notes%200;
+        }
+        if(total_notes >= 100){
+          one_h = total_notes/100;
+          total_notes = total_notes%100;
+        }
+        if(total_notes >= 50){
+          ff = total_notes/50;
+          total_notes = total_notes%50;
+        }
+        if(total_notes >= 20){
+          tw = total_notes/20;
+          total_notes = total_notes%20;
+        }
+        if(total_notes >= 10){
+          t = total_notes/10;
+          total_notes = total_notes%10;
+        }
+
+        document.getElementById("five100").innerHTML = parseInt(five_h);
+        document.getElementById("two100").innerHTML = parseInt(two_h);
+        document.getElementById("one100").innerHTML = parseInt(one_h);
+        document.getElementById("fifty").innerHTML = parseInt(ff);
+        document.getElementById("twenty").innerHTML = parseInt(tw);
+        document.getElementById("ten").innerHTML = parseInt(t);
+      }
+    </script>
+  </body>
+</html>

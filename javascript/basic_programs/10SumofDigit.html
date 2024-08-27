@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Sum of Digits Program</title>
+       <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <div class="container">
+      <h3>Sum of Digits Program</h3>
+      <div class="form-group">
+        <input type="text" id="num1" class="form-control" placeholder="Enter a Digit"><br>
+        <button class="btn btn-primary" onclick="DigitsSum()">Sum of Digits</button><br>
+      </div>
+      <h3>Sum of All Digits: <span id="out"></span></h3>
+    </div>
+    <script>
+      function DigitsSum(){
+
+        let num = parseInt(document.getElementById("num1").value);
+
+        var sum = 0;
+        
+        do{
+          sum += num%10;
+          num = parseInt(num/10); 
+        }
+        while(num%10 != 0);
+
+        document.getElementById("out").innerHTML = sum;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Calculator</title>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 align="center">Calculator</h1>
+      <hr>
+      <div class="form-group">
+      <input type="number" placeholder="Enter First Number" id="num1" class="form-control"><br>
+      <input type="number" placeholder="Enter Second Number" id="num2" class="form-control"><br>
+
+      <button onclick="add()" class="btn btn-primary" style="font-weight: bold">Add (+)</button>
+      <button onclick="sub()" class="btn btn-primary" style="font-weight: bold">Subtract (-)</button>
+      <button onclick="prod()" class="btn btn-primary" style="font-weight: bold">Multiply (*)</button>
+      <button onclick="division()" class="btn btn-primary" style="font-weight: bold">Division (/)</button>
+      <button onclick="per()" class="btn btn-primary" style="font-weight: bold">Percentage (%)</button><br>
+
+      <hr>
+      <h2>Output : <span id="output">Will Appear Here!</span> </h2>
+      <hr>
+      </div>
+    </div>
+  <script>
+    function add(){
+      console.log(document.getElementById("num1"),"<====gm")
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      var total = num1 + num2;
+      document.getElementById("output").innerHTML = total;
+    }
+    function sub(){
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      var total = num1 - num2;
+      document.getElementById("output").innerHTML = total;
+    }
+    function prod(){
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      var total = num1 * num2;
+      document.getElementById("output").innerHTML = total;
+    }
+    function division(){
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      var total = num1 / num2;
+      document.getElementById("output").innerHTML = total;
+    }
+    function per(){
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      var total = (num2/num1)*100;
+      document.getElementById("output").innerHTML = total;
+    }
+  </script>
+  </body>
+</html>
