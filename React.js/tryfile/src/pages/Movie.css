@@ -1,0 +1,21 @@
+.mainDiv {
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 4px;
+    background-color: rgb(238, 241, 247);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.details {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.desc {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.movie-data {
+    font-size: 18px;
+}

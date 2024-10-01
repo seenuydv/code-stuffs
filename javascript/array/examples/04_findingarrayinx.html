@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arrays</h1>
+<h2>The Array.isArray() Method</h2>
+
+<p>Array.isArray() returns true if an object is an arry, otherwise false:</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange",["ppp","qqq"], "Apple", "Mango",["sfad", "asdfad"], "dsfads", ["asdsfad","asdfads"]];
+let inx = 0;
+for(let i=0; i<fruits.length;i++){
+	let result =  Array.isArray(fruits[i]);
+    if(result == true){
+    	inx = i;
+			console.log("Index ",inx," Has an Array!");
+    }
+}
+// document.getElementById("demo").innerHTML = inx;
+</script>
+
+</body>
+</html>

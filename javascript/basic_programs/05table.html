@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Table Program</title>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Table Program</h2>
+      <div class="form-group">
+        <input class="form-control" id="num" type="text"><br>
+        <button class="btn btn-primary" onclick="Table()" style="font-weight:bold">Get Table</button>
+      </div>
+    </div>
+    <script>
+      function Table(){
+        let tnum = parseInt(document.getElementById("num").value);
+
+        for(i=1;i<=10;i++){
+          console.log(tnum ,"*", i ,"=", tnum*i);
+        }
+      }
+    </script>
+  </body>
+</html>
